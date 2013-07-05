@@ -75,17 +75,16 @@ $INFO = {
 bot.add_command 'about' do |pkt, parts, msg|
   sysinfo = SysInfo.new
 
-  out = bot.config['about']
-  out.gsub! '#_name', $INFO[:name]
-  out.gsub! '#_version', $INFO[:version]
-  out.gsub! '#_owner', bot.config['owner']
-  out.gsub! '#_creators', $INFO[:authors].join(', ')
-  out.gsub! '#_os', sysinfo.impl.to_s
-  out.gsub! '#_arch', sysinfo.arch.to_s
-  out.gsub! '#_vm', sysinfo.vm.to_s
-  out.gsub! '#_rbver', sysinfo.ruby.join('.')
-  
-  bot.damn.say pkt.param, out
+  bot.damn.say pkt.param, bot.config['about'] % {
+    :name => $INFO[:name],
+    :version => $INFO[:version],
+    :owner => bot.config['owner'],
+    :creators => $INFO[:authors].join(', '),
+    :os => sysinfo.impl.to_s,
+    :arch => sysinfo.arch.to_s,
+    :vm => sysinfo.vm.to_s,
+    :rbver => sysinfo.ruby.join('.')
+  }
 end
 
 bot.connect

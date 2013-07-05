@@ -2,8 +2,4 @@ user:
  name: 'nuckchorris0'
  authtoken: '[REDACTED]'
 trigger: '--'
-owner: 'nuckchorris0'
-rooms:
- - "chat:GoNuckYourself"
- - "chat:botdom"
-about: 'Running <abbr title="Created by #_creators">#_name #_version</abbr> on <abbr title="#_os #_arch">#_vm #_rbver</abbr>. Owner: #_owner'
+about: 'Running <abbr title="Created by %<creators>s">%<name>s %<version>s</abbr> on <abbr title="%<os>s %<arch>s">%<vm>s %<rbver>s</abbr>. Owner: %<owner>s'
