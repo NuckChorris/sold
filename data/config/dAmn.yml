@@ -1,4 +1,8 @@
 dAmn:
- host: 'chat.deviantart.com'
- port: 3900
- agent: 'Sold/0.1'
+ server:
+  host: 'chat.deviantart.com'
+  port: 3900
+  agent: 'Sold/0.1'
+ client:
+  name: 'nuckchorris0'
+  authtoken: ''

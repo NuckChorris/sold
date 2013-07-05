@@ -2,7 +2,7 @@ $: << File.expand_path(File.dirname(__FILE__))
 
 require 'colorize'
 require 'sysinfo'
-require 'sold/damn'
+require 'sold/damn/damn'
 require 'sold/config'
 
 class Sold::Bot

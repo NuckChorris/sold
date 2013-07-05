@@ -1,4 +1,4 @@
-require 'sold/protocol'
+require 'sold/damn/protocol'
 
 class Sold::DAmn < Sold::Protocol; end
 

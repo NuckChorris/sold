@@ -1,12 +1,12 @@
 require 'sold/event_socket'
 require 'sold/event_emitter'
-require 'sold/packet'
+require 'sold/damn/packet'
 require 'sold/config'
 require 'yaml'
 
 LOGGING = true
 
-class Sold::Protocol < Sold::EventEmitter
+class Sold::DAmn::Protocol < Sold::EventEmitter
   def initialize
     super()
     emit :init
